@@ -1,113 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiceColor</title>
-  <meta name="description" content="Сервісне обслуговування та продаж колірувального обладнання: дозатори, шейкери, гіроміксери. Налаштування, ремонт, програмне забезпечення.">
-  <meta name="keywords" content="ServiceColor, колірувальне обладнання, дозатори, шейкери, гіроміксери, обслуговування, налаштування, продаж, сервіс">
-  <meta name="author" content="ServiceColor">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ServiceColor — сервісне обслуговування колірувального обладнання: дозатори, шейкери, міксери. Налаштування, ремонт, продаж Б/У обладнання та дистанційна підтримка." />
+  <meta name="keywords" content="ServiceColor, обслуговування дозаторів, шейкери, міксери, ремонт, налаштування, продаж, колоранти, тонування, сервісне обслуговування" />
+  <meta name="author" content="ServiceColor" />
+  <title>ServiceColor — Сервісне обслуговування обладнання</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; font-family: Arial, sans-serif; overflow: hidden; }
-
-    .slideshow { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; }
-    .slideshow img {
-      position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0;
-      animation: fade 60s infinite;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #111;
     }
-
-    .slideshow img:nth-child(1) { animation-delay: 0s; }
-    .slideshow img:nth-child(2) { animation-delay: 12s; }
-    .slideshow img:nth-child(3) { animation-delay: 22s; }
-    .slideshow img:nth-child(4) { animation-delay: 32s; }
-    .slideshow img:nth-child(5) { animation-delay: 42s; }
-    .slideshow img:nth-child(6) { animation-delay: 52s; }
-
-    @keyframes fade {
-      0% { opacity: 0; }
-      5% { opacity: 1; }
-      20% { opacity: 1; }
-      25% { opacity: 0; }
-      100% { opacity: 0; }
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      z-index: 2;
     }
-
-    .content {
-      position: relative; z-index: 1; height: 100vh;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center; color: white;
-      background-color: rgba(0, 0, 0, 0.4); padding: 20px;
-    }
-
-    .logo { font-size: 3.5rem; font-weight: bold; margin-bottom: 1rem; }
-    .description { font-size: 1.5rem; margin-bottom: 2rem; }
-    .btn {
-      padding: 0.8rem 2rem; font-size: 1rem;
-      background-color: #ffffff; color: #000000;
-      border: none; border-radius: 50px; cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .btn:hover { background-color: #eaeaea; }
-
-    footer {
-      position: absolute; bottom: 0; width: 100%;
-      background: rgba(0,0,0,0.6); color: white; padding: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
       text-align: center;
     }
-
-    .contact {
-      font-size: 1rem;
-      margin-top: 10px;
+    .slideshow {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
     }
-
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: slideShow 50s infinite;
+    }
+    .slideshow img:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .slideshow img:nth-child(2) {
+      animation-delay: 10s;
+    }
+    .slideshow img:nth-child(3) {
+      animation-delay: 20s;
+    }
+    .slideshow img:nth-child(4) {
+      animation-delay: 30s;
+    }
+    .slideshow img:nth-child(5) {
+      animation-delay: 40s;
+    }
+    @keyframes slideShow {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      20% { opacity: 1; }
+      30% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
     form {
-      margin-top: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
-
-    input, textarea {
-      margin-top: 10px;
-      width: 80%;
+    input, textarea, button {
+      margin-bottom: 15px;
       padding: 10px;
-      border-radius: 8px;
       border: none;
+      border-radius: 5px;
     }
-
-    input[type="submit"] {
-      margin-top: 15px;
-      background: #fff;
+    button {
+      background-color: #1e90ff;
+      color: white;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="slideshow">
-    <img src="background-6.jpg" alt="Обкладинка">
-    <img src="background-1.jpg" alt="Обладнання 1">
-    <img src="background-2.jpg" alt="Обладнання 2">
-    <img src="background-3.jpg" alt="Обладнання 3">
-    <img src="background-4.jpg" alt="Обладнання 4">
-    <img src="background-5.jpg" alt="Обладнання 5">
+    <img src="img/IMG_1734.JPG" alt="Оборудование 1">
+    <img src="img/IMG_1735.JPG" alt="Оборудование 2">
+    <img src="img/IMG_3645.JPG" alt="Оборудование 3">
+    <img src="img/IMG_6730.jpg" alt="Оборудование 4">
+    <img src="img/IMG_6782.JPG" alt="Оборудование 5">
   </div>
-
-  <div class="content">
-    <div class="logo">ServiceColor</div>
-    <div class="description">
-      Сервіс, налаштування, ремонт і продаж колірувального обладнання: дозатори, шейкери, гіроміксери.
-    </div>
-    <button class="btn">Детальніше</button>
-  </div>
-
-  <footer>
-    <div>Зв'яжіться з нами</div>
-    <div class="contact">📞 068-828-72-40 | 📧 servicecolorua@gmail.com</div>
-    <form action="https://formspree.io/f/mnqeajgl" method="POST">
-      <input type="text" name="name" placeholder="Ваше ім’я" required><br>
-      <input type="email" name="email" placeholder="Ваш Email" required><br>
-      <textarea name="message" rows="4" placeholder="Повідомлення" required></textarea><br>
-      <input type="submit" value="Надіслати">
+  <header>
+    <h1>ServiceColor — Колірувальне обладнання та сервіс</h1>
+  </header>
+  <main>
+    <p>Надаємо повний спектр послуг з обслуговування, налаштування, ремонту та продажу колірувального обладнання (дозатори, шейкери, міксери). Дистанційна підтримка та встановлення ПЗ також доступні.</p>
+    <h2>Зворотній зв'язок</h2>
+    <form action="https://formspree.io/f/xpwdzwez" method="POST">
+      <input type="text" name="name" placeholder="Ваше ім’я" required>
+      <input type="email" name="email" placeholder="Ваш Email" required>
+      <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
     </form>
-  </footer>
+    <p>Email: servicecolorua@gmail.com</p>
+    <p>Телефон: 068-828-72-40</p>
+  </main>
 </body>
 </html>
