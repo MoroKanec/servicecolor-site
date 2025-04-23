@@ -14,8 +14,174 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>ServiceColor — Сервіс колірувального обладнання</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background-color: #000;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #f4d03f;
+    }
+    header .lang {
+      font-size: 1rem;
+    }
+    header .lang a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    header .lang a:hover {
+      color: #fff;
+    }
+    .slideshow {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: slideShow 160s infinite;
+    }
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 10s; }
+    .slideshow img:nth-child(3) { animation-delay: 20s; }
+    .slideshow img:nth-child(4) { animation-delay: 30s; }
+    .slideshow img:nth-child(5) { animation-delay: 40s; }
+    .slideshow img:nth-child(6) { animation-delay: 50s; }
+    .slideshow img:nth-child(7) { animation-delay: 60s; }
+    .slideshow img:nth-child(8) { animation-delay: 70s; }
+    .slideshow img:nth-child(9) { animation-delay: 80s; }
+    .slideshow img:nth-child(10) { animation-delay: 90s; }
+    .slideshow img:nth-child(11) { animation-delay: 100s; }
+    .slideshow img:nth-child(12) { animation-delay: 110s; }
+    .slideshow img:nth-child(13) { animation-delay: 120s; }
+    .slideshow img:nth-child(14) { animation-delay: 130s; }
+    .slideshow img:nth-child(15) { animation-delay: 140s; }
+    .slideshow img:nth-child(16) { animation-delay: 150s; }
+    @keyframes slideShow {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 120px 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background-color: #218838;
+    }
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 1em;
+      color: #ccc;
+    }
+    @media (max-width: 600px) {
+      header .logo {
+        font-size: 1.2rem;
+      }
+      header .lang a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- вміст скорочено для архівації -->
+  <div class="slideshow">
+    <img src="IMG_1734.JPG" alt="фон 1">
+    <img src="IMG_1735.JPG" alt="фон 2">
+    <img src="IMG_5103.jpg" alt="фон 3">
+    <img src="IMG_5104.jpg" alt="фон 4">
+    <img src="IMG_5105.jpg" alt="фон 5">
+    <img src="IMG_5106.jpg" alt="фон 6">
+    <img src="IMG_5107.jpg" alt="фон 7">
+    <img src="IMG_6730.jpg" alt="фон 8">
+    <img src="IMG_6782.JPG" alt="фон 9">
+    <img src="IMG_3645.JPG" alt="фон 10">
+    <img src="IMG_1739.JPG" alt="фон 11">
+    <img src="IMG_1749.jpeg" alt="фон 12">
+    <img src="IMG_3220.JPG" alt="фон 13">
+    <img src="IMG_3221.JPG" alt="фон 14">
+    <img src="IMG_3225.JPG" alt="фон 15">
+    <img src="IMG_3227.JPG" alt="фон 16">
+  </div>
+  <header>
+    <div class="logo">ServiceColor</div>
+    <div class="lang">
+      <a href="/">UA</a> | <a href="/index_en.html">EN</a> | <a href="/index_ru.html">RU</a>
+    </div>
+  </header>
+  <main>
+    <h2>ServiceColor — сервіс та підтримка колірувального обладнання</h2>
+    <p>Налаштування, ремонт, обслуговування і продаж дозаторів, гіроміксерів і шейкерів.</p>
+    <p>Ми допомагаємо з ремонтом дозаторів, гіроміксерів та шейкерів. Надійне обслуговування по всій Україні.</p>
+    <form action="https://formspree.io/f/xpwdzwez" method="POST">
+      <input type="text" name="name" placeholder="Ваше ім’я" required>
+      <input type="email" name="email" placeholder="Ваш Email" required>
+      <textarea name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </main>
+  <footer>
+    Зв’яжіться з нами Email: servicecolorua@gmail.com | Телефон: 068-828-72-40<br>
+    © 2025 ServiceColor. Усі права захищено.
+  </footer>
 </body>
 </html>
