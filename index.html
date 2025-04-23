@@ -6,7 +6,7 @@
   <meta name="description" content="Обслуговування, ремонт та налаштування колірувального обладнання: дозатори, шейкери, гіроміксери. Відновлення та сервіс." />
   <meta name="keywords" content="колірувальне обладнання, сервіс дозаторів, ремонт шейкерів, обслуговування міксерів, налаштування дозатора, ServiceColor, Ремонт обладнання, колеровка, колеровочна студія, Тонувальна студія, гироміксер, міксер, шейкер, сервісне обслуговування, сервисное обслуживание, калібрування, калібрування дозатора, колоранти, барвники, пігменти, налаштування, налаштування дозатора, дистанційна допомога, віддалена допомога, Надання ремонту по всій Україні, ремонт обладнання по всій україні, Колірувальне обладнання, Калібрування обладнання, сервіс, сервісне обслуговування колірувального обладнання" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="ServiceColor — Сервіс колірувального обладнання" />
+  <meta property="og:title" content="ServiceColor — Сервіс калірувального обладнання" />
   <meta property="og:description" content="Налаштування, ремонт, обслуговування та продаж дозаторів, міксерів, шейкерів." />
   <meta property="og:image" content="https://servicecolor-site.vercel.app/A_website_homepage_screenshot_for_ServiceColor,_a_.png" />
   <meta property="og:url" content="https://servicecolor-site.vercel.app" />
@@ -15,58 +15,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>ServiceColor — Сервіс колірувального обладнання</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      background-color: #000;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding: 10px 20px;
-      background: rgba(0, 0, 0, 0.85);
-      text-align: center;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header .logo {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #f4d03f;
-    }
-    header .lang {
-      font-size: 1rem;
-    }
-    header .lang a {
-      color: #ccc;
-      margin: 0 10px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    header .lang a:hover {
-      color: #fff;
-    }
-    .slideshow {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      overflow: hidden;
-    }
-    .slideshow img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      animation: slideShow 160s infinite;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; color: white; background-color: #000; }
+    header { position: sticky; top: 0; width: 100%; padding: 10px 20px; background: rgba(0,0,0,0.85); text-align: center; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+    header .logo { font-size: 1.6rem; font-weight: 600; color: #f4d03f; }
+    header .lang { font-size: 1rem; }
+    header .lang a { color: #ccc; margin: 0 10px; text-decoration: none; transition: color .3s; }
+    header .lang a:hover { color: #fff; }
+    .slideshow { position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; z-index: -1; overflow: hidden; }
+    .slideshow img, .slideshow video { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: slideShow 170s infinite; }
     .slideshow img:nth-child(1) { animation-delay: 0s; }
     .slideshow img:nth-child(2) { animation-delay: 10s; }
     .slideshow img:nth-child(3) { animation-delay: 20s; }
@@ -83,6 +39,7 @@
     .slideshow img:nth-child(14) { animation-delay: 130s; }
     .slideshow img:nth-child(15) { animation-delay: 140s; }
     .slideshow img:nth-child(16) { animation-delay: 150s; }
+    .slideshow video { animation-delay: 160s; }
     @keyframes slideShow {
       0% { opacity: 0; }
       5% { opacity: 1; }
@@ -90,56 +47,15 @@
       25% { opacity: 0; }
       100% { opacity: 0; }
     }
-    main {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 120px 20px 40px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    form {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    form input, form textarea {
-      margin: 10px 0;
-      padding: 10px;
-      width: 90%;
-      max-width: 400px;
-      border: none;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background-color: #218838;
-    }
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      font-size: 1em;
-      color: #ccc;
-    }
+    main { position: relative; z-index: 1; text-align: center; padding: 120px 20px 40px; background: rgba(0,0,0,0.6); }
+    form { margin-top: 40px; display: flex; flex-direction: column; align-items: center; }
+    form input, form textarea { margin: 10px 0; padding: 10px; width: 90%; max-width: 400px; border: none; border-radius: 5px; }
+    form button { padding: 10px 20px; font-size: 1rem; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background .3s; }
+    form button:hover { background-color: #218838; }
+    footer { position: relative; z-index: 1; text-align: center; padding: 20px; background: rgba(0, 0, 0, 0.8); font-size: 1em; color: #ccc; }
     @media (max-width: 600px) {
-      header .logo {
-        font-size: 1.2rem;
-      }
-      header .lang a {
-        font-size: 0.9rem;
-      }
+      header .logo { font-size: 1.2rem; }
+      header .lang a { font-size: .9rem; }
     }
   </style>
 </head>
@@ -161,6 +77,9 @@
     <img src="IMG_3221.JPG" alt="фон 14">
     <img src="IMG_3225.JPG" alt="фон 15">
     <img src="IMG_3227.JPG" alt="фон 16">
+    <video autoplay muted loop playsinline>
+      <source src="471327885580720148.MP4" type="video/mp4">
+    </video>
   </div>
   <header>
     <div class="logo">ServiceColor</div>
