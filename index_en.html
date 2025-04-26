@@ -34,10 +34,12 @@
     <img src="IMG_3225.JPG" alt="Slide 15">
     <img src="IMG_3227.JPG" alt="Slide 16">
   </div>
-<video autoplay muted loop playsinline style="position:fixed;width:100vw;height:100vh;top:0;left:0;object-fit:cover;z-index:-2;">
+<video autoplay muted playsinline loop style="position:fixed;width:100vw;height:100vh;top:0;left:0;object-fit:cover;z-index:-2;display:none;">
   <source src="471327885580720148.MP4" type="video/mp4">
   Ваш браузер не поддерживает видео.
 </video>
+
+
 
 <video autoplay muted loop playsinline style="position:fixed;width:100vw;height:100vh;top:0;left:0;object-fit:cover;opacity:0;z-index:-2;animation:slideShow 160s infinite;animation-delay:160s;">
   <source src="471327885580720148.MP4" type="video/mp4">
@@ -66,5 +68,33 @@
     Contact us Email: servicecolorua@gmail.com | Phone: 068-828-72-40<br>
     © 2025 ServiceColor. All rights reserved.
   </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slideshow = document.querySelector('.slideshow');
+  const video = document.querySelector('video');
+
+  function showSlideshow() {
+    slideshow.style.display = 'block';
+    video.style.display = 'none';
+
+    // Через 80 секунд показываем видео
+    setTimeout(showVideo, 80000);
+  }
+
+  function showVideo() {
+    slideshow.style.display = 'none';
+    video.style.display = 'block';
+    video.currentTime = 0;
+    video.play();
+
+    // Когда видео заканчивается, снова показываем слайдшоу
+    video.onended = showSlideshow;
+  }
+
+  showSlideshow();
+});
+</script>
+
 </body>
 </html>
