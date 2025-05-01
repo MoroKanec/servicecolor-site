@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XJXRS0F93"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3XJXRS0F93');
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ServiceColor — Сервіс колірувального обладнання</title>
   <meta name="description" content="Обслуговування, ремонт та налаштування колірувального обладнання: дозатори, шейкери, гіроміксери. Відновлення та сервіс." />
-  <meta name="keywords" content="сервис дозаторов, ремонт шейкеров, настройка гиромиксеров, обслуживание оборудования для краски, сервіс дозаторів, ремонт шейкерів, налаштування гіроміксерів, обслуговування обладнання для фарби, ServiceColor, сервіс колірувального обладнання, продаж дозаторів, ремонт міксерів, відновлення дозаторів, технічне обслуговування, шейкери, гіроміксери, дозатори, обслуговування шейкерів" />
+  <meta name="keywords" content="сервіс дозаторів, ремонт шейкерів, налаштування гіроміксерів, ServiceColor, обслуговування обладнання для фарби" />
   <meta name="author" content="ServiceColor" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://servicecolor-site.vercel.app/" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="ServiceColor — Сервіс колірувального обладнання" />
   <meta property="og:description" content="Налаштування, ремонт, обслуговування та продаж дозаторів, міксерів, шейкерів." />
   <meta property="og:image" content="https://servicecolor-site.vercel.app/A_website_homepage_screenshot_for_ServiceColor,_a_.png" />
   <meta property="og:url" content="https://servicecolor-site.vercel.app" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ServiceColor — Сервіс колірувального обладнання" />
-  <meta name="twitter:description" content="Налаштування, ремонт, обслуговування та продаж дозаторів, міксерів, шейкерів." />
-  <meta name="twitter:image" content="https://servicecolor-site.vercel.app/A_website_homepage_screenshot_for_ServiceColor,_a_.png" />
+
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <title>ServiceColor — Сервіс колірувального обладнання</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XJXRS0F93"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3XJXRS0F93');
+  </script>
+
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: white;
-      background-color: #000;
+      background: #000;
     }
+
     header {
       position: sticky;
       top: 0;
-      width: 100%;
-      padding: 10px 20px;
-      background: rgba(0, 0, 0, 0.85);
-      text-align: center;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.85);
     }
-    header .logo {
+
+    .logo {
       font-size: 1.6rem;
       font-weight: 600;
       color: #f4d03f;
     }
-    header .lang a {
+
+    .lang a {
       color: #ccc;
       margin: 0 10px;
       text-decoration: none;
     }
-    header .lang a:hover {
+
+    .lang a:hover {
       color: #fff;
     }
 
     .slideshow, .bg-video {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
@@ -82,7 +84,11 @@
       animation: slideShow 160s infinite;
     }
 
-    /* 16 слайдов по 10 секунд каждый */
+    /* Анимация для 16 слайдов */
+    .slideshow img:nth-child(n) {
+      animation-name: slideShow;
+    }
+
     .slideshow img:nth-child(1) { animation-delay: 0s; }
     .slideshow img:nth-child(2) { animation-delay: 10s; }
     .slideshow img:nth-child(3) { animation-delay: 20s; }
@@ -101,11 +107,9 @@
     .slideshow img:nth-child(16) { animation-delay: 150s; }
 
     @keyframes slideShow {
-      0% { opacity: 0; }
-      5% { opacity: 1; }
-      20% { opacity: 1; }
+      0%, 100% { opacity: 0; }
+      5%, 20% { opacity: 1; }
       25% { opacity: 0; }
-      100% { opacity: 0; }
     }
 
     main {
@@ -135,7 +139,7 @@
     form button {
       padding: 10px 20px;
       font-size: 1rem;
-      background-color: #28a745;
+      background: #28a745;
       color: white;
       border: none;
       border-radius: 5px;
@@ -144,7 +148,7 @@
     }
 
     form button:hover {
-      background-color: #218838;
+      background: #218838;
     }
 
     footer {
@@ -153,8 +157,8 @@
       text-align: center;
       padding: 20px;
       background: rgba(0, 0, 0, 0.8);
-      font-size: 1em;
       color: #ccc;
+      font-size: 1em;
     }
   </style>
 </head>
@@ -192,8 +196,9 @@
 
 <main>
   <h2>ServiceColor — сервіс та підтримка колірувального обладнання</h2>
-    <p>Налаштування, ремонт, обслуговування і продаж дозаторів, гіроміксерів і шейкерів.</p>
-    <p>Ми допомагаємо з ремонтом дозаторів, гіроміксерів та шейкерів. Надійне обслуговування по всій Україні.</p>
+  <p>Налаштування, ремонт, обслуговування і продаж дозаторів, гіроміксерів і шейкерів.</p>
+  <p>Ми допомагаємо з ремонтом дозаторів, гіроміксерів та шейкерів. Надійне обслуговування по всій Україні.</p>
+  
   <form action="https://formspree.io/f/xpwdzwez" method="POST">
     <input type="text" name="name" placeholder="Ваше ім’я" required>
     <input type="email" name="email" placeholder="Ваш Email" required>
@@ -203,29 +208,29 @@
 </main>
 
 <footer>
-  Зв’яжіться з нами Email: servicecolorua@gmail.com | Телефон: 068-828-72-40<br>
+  Зв’яжіться з нами: servicecolorua@gmail.com | 068-828-72-40<br>
   © 2025 ServiceColor. Усі права захищено.
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const slideshow = document.querySelector(".slideshow");
-  const video = document.querySelector(".bg-video");
+  document.addEventListener("DOMContentLoaded", () => {
+    const slideshow = document.querySelector(".slideshow");
+    const video = document.querySelector(".bg-video");
 
-  video.style.display = "none";
+    video.style.display = "none";
 
-  setTimeout(() => {
-    slideshow.style.display = "none";
-    video.style.display = "block";
-    video.currentTime = 0;
-    video.play();
+    setTimeout(() => {
+      slideshow.style.display = "none";
+      video.style.display = "block";
+      video.currentTime = 0;
+      video.play();
 
-    video.onended = () => {
-      video.style.display = "none";
-      slideshow.style.display = "block";
-    };
-  }, 160000); // 160 секунд = 16 слайдів по 10 сек
-});
+      video.onended = () => {
+        video.style.display = "none";
+        slideshow.style.display = "block";
+      };
+    }, 160000);
+  });
 </script>
 
 </body>
