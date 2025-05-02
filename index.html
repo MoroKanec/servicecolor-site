@@ -235,18 +235,16 @@
     video.style.display = "none";
 
     setTimeout(() => {
-  slideshow.style.display = "none";
-  video.style.display = "block";
-  video.currentTime = 0;
-  video.play().catch(() => {
-    console.log("Chrome поставил видео на паузу для экономии энергии.");
-  });
+      slideshow.style.display = "none";
+      video.style.display = "block";
+      video.currentTime = 0;
+      video.play();
 
-  video.onended = () => {
-    video.style.display = "none";
-    slideshow.style.display = "block";
-  };
-}, 160000);
+      video.onended = () => {
+        video.style.display = "none";
+        slideshow.style.display = "block";
+      };
+    }, 160000);
   });
 </script>
 
